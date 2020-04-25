@@ -6,40 +6,35 @@ import CardList from "./components/cardList";
 export default class Summary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.initialState;
-  }
-  get initialState() {
-    return {
-        symbolList: {}
+    this.state = {
+      symbolList : []
     };
   }
   handleClick = (e) => {
     const selectedSymbol = e.target.id;
-    let symbolDetails = localStorage.getItem(`${selectedSymbol}`);
-    if(!symbolDetails){
-        api.fetchSymbolDetails(selectedSymbol).then(data => {
-            localStorage.setItem(`${selectedSymbol}`,JSON.stringify(data));
-        });
-    }
     this.props.history.push({
         pathname: '/details',
         state: { selectedSymbol: selectedSymbol }
     });
   }
-  componentWillMount() {
-    let symbolList = localStorage.getItem('symbolList');
+  componentDidMount() {
+    let symbolList = JSON.parse(localStorage.getItem('symbolList'));
     if(!symbolList){
         api.fetchSymbols().then(data => {
-            localStorage.setItem('symbolList',JSON.stringify(data));
+            let res = JSON.stringify(data);
+            localStorage.setItem('symbolList',res);
+            this.setState({symbolList:JSON.parse(res)});
         });
+    }else{
+      this.setState({symbolList:symbolList});
     }
-    this.setState({symbolList:JSON.parse(symbolList)});
   }
   render() {
+    const {symbolList} = this.state;
     return (
       <div className="wrapper">
             <CardList 
-            items={this.state.symbolList}
+            items={symbolList}
             onChange={this.handleClick}/>
       </div>
     );

@@ -1,42 +1,67 @@
 import * as React from "react";
 import "./styles.scss";
+import api from "./api/api";
 import TableView from "./components/table";
 import Cards from "./components/cards";
 
 export default class Details extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.initialState;
-  }
-  get initialState() {
-    return {
-      symbolDetail: {},
-      symbolList: {},
+    this.state = {
+      symbolDetail: [],
+      symbolList: [],
     };
   }
-  componentWillMount() {
+  componentDidMount() {
     const propsState = this.props.location.state;
     if (propsState && propsState.selectedSymbol) {
-      let symbolDetails = localStorage.getItem(`${propsState.selectedSymbol}`
-      );
+      const selectedSymbol = propsState.selectedSymbol;
+      //get the symbol list and details from localstorage
       let symbolList = JSON.parse(localStorage.getItem("symbolList"));
+      let symbolDetail = JSON.parse(localStorage.getItem(selectedSymbol));
+
       symbolList = symbolList.filter(
         (item) => item.symbol_id === propsState.selectedSymbol
       );
-      this.setState({
-        symbolDetail: JSON.parse(symbolDetails),
-        symbolList: symbolList,
-      });
+      //if details not available in localstorage call fetch api
+      if (!symbolDetail) {
+        api.fetchSymbolDetails(selectedSymbol).then((data) => {
+          let res = JSON.stringify(data);
+          localStorage.setItem(`${selectedSymbol}`, res);
+          this.setState({
+            symbolDetail: JSON.parse(res),
+            symbolList: symbolList,
+          });
+        });
+      } else {
+        this.setState({
+          symbolDetail: symbolDetail,
+          symbolList: symbolList,
+        });
+      }
+      console.log("componentDidMount", symbolList, symbolDetail);
     }
   }
   render() {
-    return <div className="wrapper">
-        <Cards
-        item={this.state.symbolList}
-        />
-        <TableView
-        items={this.state.symbolDetail}
-        />
-    </div>
+    const { symbolDetail, symbolList } = this.state;
+    console.log(symbolDetail, symbolList);
+    if (
+      (symbolDetail && !symbolDetail.length > 0) ||
+      (symbolList && !symbolList.length > 0)
+    ) {
+      return (
+        <div className="wrapper">
+          <div className="loading">
+            <div className="loader"></div>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="wrapper">
+        <Cards item={symbolList} />
+        <TableView items={symbolDetail} />
+      </div>
+    );
   }
 }
