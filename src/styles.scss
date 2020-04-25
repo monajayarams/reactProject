@@ -1,0 +1,405 @@
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    max-width: 80%;
+    min-width: 100px;
+    min-height: 400px;
+    padding: 20px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 36px #222;
+    background-color: #fefefe;
+    max-height: calc(100vh - 143px);
+    overflow-y: auto;
+    position: static;
+    margin:10px;
+}
+.wrapper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Open Sans";
+    margin-top: 0em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+    margin-right: 1%;
+}
+
+label{
+    margin-bottom: 0.5em;
+    color: #444;
+    font-weight: lighter;
+    font-family: "Helvetica Neue";
+}
+input {
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #d6d1d5;
+}
+
+button {
+    min-width: 50%;
+    cursor: pointer;
+    padding: 0.938em;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(66, 103, 178);
+    border-color: rgb(66, 103, 178);
+    color: #fefefe;
+    margin:auto;
+    font-size: 16px;
+    font-weight: 500;
+    min-height: 52px;
+}
+.form-wrapper > h2 {
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto";
+    font-size: 2em;
+    font-weight: lighter;
+    margin-top: 0.25em;
+    margin-bottom:5px;
+    color: #222;
+}
+select:not([size]):not([multiple]) {
+    height: calc(2.25rem + 2px);
+}
+
+.select {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.radioCls{
+    margin-right: 6px;
+}
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgb(255, 255, 255);
+    font-family: "Proxima Nova", Montserrat, "Helvetica Neue", "Noto Sans", sans-serif;
+}
+body{
+    margin:unset !important;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: rgb(245, 245, 245);
+}
+.root{
+    width:100%;
+}
+.error-msg{
+    color:red;
+    font-style: italic;
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 1.25rem;
+    width: 18rem;
+    cursor: pointer;
+  }
+.row {
+    margin: 0 -5px;
+    height:100%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+.column {
+    float: left;
+    width: 20%;
+    padding: 20px 35px;
+  }
+  .card-img-top {
+    width: 50%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    margin: auto;
+    padding-top: 10px;
+    pointer-events: none;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 15px;
+    text-align: center;
+    pointer-events: none;
+}
+.card-title {
+    margin: 0;
+    pointer-events: none;
+}
+.card-text{
+    margin: 5px;
+    pointer-events: none;
+}
+h5 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.text-center {
+    text-align: center!important;
+}
+.tableTitle {
+    text-align: center;
+    color: rgb(66, 103, 178);
+    margin-top:unset;
+}
+.card-col-title{
+    color: rgb(66, 103, 178);
+}
+.rTable {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin:auto;
+    border-style: hidden;
+ }
+ .rTableRow {
+    display: table-row;
+    text-align: center;
+ }
+ .rTableRow:nth-child(even){
+    background-color: rgb(255, 255, 255);
+};
+.rTableRow:nth-child(odd){
+    background-color: rgb(245, 245, 245);
+};
+ .rTableHeading {
+    display: table-header-group;
+    background-color: rgb(66, 103, 178);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+ }
+ .rTableHead{
+    height: 52px;
+ }
+ .rTableCell, .rTableHead {
+    display: table-cell;
+    padding: 3px 10px;
+    border: 1px solid #999999;
+    vertical-align: middle;
+    height: 42px;
+ }
+ .table-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 100%;
+    min-width: 100px;
+    padding: 20px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 36px #222;
+    background-color: #fefefe;
+    overflow-y: auto;
+    position: static;
+    margin:10px;
+}
+tr:last-child td {
+    border-bottom: 1px solid #444;
+    border-bottom-left-radius: 12px; border-bottom-right-radius: 12px;
+}
+.card-column{
+    height: 235px;
+    width: 24rem;
+    box-shadow: 0px 8px 36px #222;
+}
+.card-col {
+    width: 28%;
+}
+.card-col .card-text{
+    font-size: 14px;
+}
+.home{
+    height:0;
+}
+.video{
+    text-align: center;
+    padding-top: 9%;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    min-width: 127px;
+    max-width: 127px;
+    box-sizing: border-box;
+    text-align: center;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: xx-large;
+    color:rgb(66, 103, 178);
+}
+.logo-li{
+    float: left;
+}
+.nav{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav-content{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+ul{
+    margin: auto;
+    margin-left: 340px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    cursor: pointer;
+    padding-left: 0px;
+}
+a {
+    display: block;
+    cursor: pointer;
+    color: rgb(118, 118, 118);
+    text-decoration: none;
+}
+ul.horizontal li {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 55px;
+    text-decoration: none;
+}
+.field-title{
+    font-weight: 400;
+}
+.LIVECOIN_SPOT_CASH_BTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/badc3a7752754ead944efe3f17d318e0.png");
+}
+.HUOBIPRO_SPOT_DOGE_BTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/add0f7f606f64e38bfb9c9e575570ab3.png");
+}
+.BINANCE_SPOT_BNB_NGN{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/cbcaf280a4794b6193511f247532f357.png");
+}
+.HITBTC_SPOT_MIPS_BTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/69ee3474baa94bff8f398b76682838d5.png");
+}
+.BITTREX_SPOT_TES_BTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/ed46d8a7ea6c4ff28ff8587956aacee6.png");
+}
+.POLONIEX_SPOT_DSH_XMR{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/7983b8b34e4f4e4d9a93f7b67234b231.png");
+}
+.YOBIT_SPOT_HYPERX_USD{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/006e1348e6b74a399d2fa469d293a23d.png");
+}
+.YOBIT_SPOT_TRIX_ETH{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/de3a4355527d4a648ac79e68cfa751ae.png");
+}
+.YOBIT_SPOT_TRIX_RUB{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/31e781cca99941e78b3efe941ce556af.png");
+}
+.BCEX_SPOT_GEC_PAY{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/81d785be89e5435a8969ba33bef0c15d.png");
+}
+.BCEX_SPOT_DCT_SOP{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/b71957fb588b4dd3a71b7aadf0e2a95c.png");
+}
+.CREX24_SPOT_FOS_BTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/e64a076c255e4e26a516f7625f0ecefa.png");
+}
+.CREX24_SPOT_FOTC_BTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/7182acb3fd414253a56065ec88fdb73d.png");
+}
+.GRAVIEX_SPOT_LAB_ETH{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/6de7cc521c7d4c24901c4d3da2c8a7f1.png");
+}
+.GRAVIEX_SPOT_LAB_USDT{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/cf02f118b5f744c6bb3dd99dd6f90465.png");
+}
+.GRAVIEX_SPOT_MGB_BTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/6824dba7c72448b4959146f79dc3448b.png");
+}
+.OPENLEDGER_SPOT_SONM_BITCNY{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/e97485a963d74f309c98a90c5ecdd3fa.png");
+}
+.TRADESATOSHI_SPOT_CRAVE_ETH{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/330d5ab4ac9f43729f2005f7268ab045.png");
+}
+.TRADESATOSHI_SPOT_CRAVE_LTC{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/0cb7e9d28a7c414ba0308732d7c22f79.png");
+}
+.COINEXCHANGE_SPOT_EBTC_ETH{
+    content:url("https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_512/a641c6a121d24ae3a5a7de0b833fea40.png");
+}

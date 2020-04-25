@@ -1,0 +1,59 @@
+{
+    "techList" : [
+    {
+        "name": "JavaScript",
+        "key": "js",
+        "label": "JavaScript"
+    },
+    {
+        "name": "React",
+        "key": "react",
+        "label": "React"
+    },
+    {
+        "name": "ReactNative",
+        "key": "reactNative",
+        "label": "React Native"
+    },
+    {
+        "name": "CSS",
+        "key": "css",
+        "label": "CSS"
+    },
+    {
+        "name": "HTML",
+        "key": "html",
+        "label": "HTML"
+    },
+    {
+        "name": "Angular",
+        "key": "angular",
+        "label": "Angular"
+    },
+    {
+        "name": "Vue JS",
+        "key": "vue",
+        "label": "Vue Js"
+    },
+    {
+        "name": "Java",
+        "key": "java",
+        "label": "Java"
+    },
+    {
+        "name": "Node JS",
+        "key": "node",
+        "label": "Node JS"
+    },
+    {
+        "name": "AWS",
+        "key": "aws",
+        "label": "AWS"
+    },
+    {
+        "name": "C#",
+        "key": "c#",
+        "label": "C#"
+    }
+]
+}

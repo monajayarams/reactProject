@@ -1,0 +1,28 @@
+{
+  "apiKey": "7C56AAAC-E077-4828-9491-4CA9683BEF8D",
+  "apiURL":"https://rest.coinapi.io/v1/symbols?filter_symbol_id=",
+  "apiDetailsUrl":"https://rest.coinapi.io/v1/trades/",
+  "apiDetailsQueryParam":"/latest?limit=10",
+  "symbols": [
+    "LIVECOIN_SPOT_CASH_BTC",
+    "COINEXCHANGE_SPOT_EBTC_ETH",
+    "BINANCE_SPOT_BNB_NGN",
+    "HUOBIPRO_SPOT_DOGE_BTC",
+    "YOBIT_SPOT_HYPERX_USD",
+    "POLONIEX_SPOT_DSH_XMR",
+    "BITTREX_SPOT_TES_BTC",
+    "HITBTC_SPOT_MIPS_BTC",
+    "YOBIT_SPOT_TRIX_ETH",
+    "YOBIT_SPOT_TRIX_RUB",
+    "BCEX_SPOT_GEC_PAY",
+    "TRADESATOSHI_SPOT_CRAVE_LTC",
+    "TRADESATOSHI_SPOT_CRAVE_ETH",
+    "OPENLEDGER_SPOT_SONM_BITCNY",
+    "GRAVIEX_SPOT_MGB_BTC",
+    "GRAVIEX_SPOT_LAB_USDT",
+    "GRAVIEX_SPOT_LAB_ETH",
+    "CREX24_SPOT_FOTC_BTC",
+    "CREX24_SPOT_FOS_BTC",
+    "BCEX_SPOT_DCT_SOP"
+  ]
+}
