@@ -1,22 +1,20 @@
 # Instructions
 
-Fork this project, create a React application that meets the following requirements, then email us a link to your completed codesandbox project.
+React application that has the following requirements
 
-## 1. The application has multiple "views" or "pages" that exist at independent URLs. Feel free to use a routing lib like React Router to accomplish this.
+## 1. The application has multiple "views" or "pages" that exist at independent URLs using React Router.
 
-## 2. On the first view, hit a public api that returns an array of items. Map over the response and create a summary display for each item. Some examples might be:
+## 2. The first view, hits a public api that returns an array of items. Maps over the response and creates a summary display for each item. 
 
-- Github api to get a list of repos
-- Github api to return Pull Requests for a particular project
-- There is a large list of other APIS that you could choose from here - https://github.com/public-apis/public-apis (choose one you can hit from the browser)
+## 3. The second view is the details page where you can view further details about one of the summary items.
 
-## 3. The second view should be a details page where you can view further details about one of the summary items.
-
-- There should be a way back to the summary
-
-## 4. Create a third page with a form with that has a checkbox, a radio selection, an input, and a select. The names or values is not important, so feel free to be creative.
+## 4. The third view is with a form that has a checkbox, a radio selection, an input, and a select covering the below requirements 
 
 - All fields are required, and the user should get feedback when trying to submit the form when it is in an invalid state.
-- If all fields pass validation, console.log the form values and then reset the form back to its initial state.
+- If all fields pass validation, the form values are displayed in console logs and form is reset back to its initial state.
 
-## Bonus points (not required) for using TypeScript and/or Styled Components
+## To Run the Project
+
+## npm install
+
+## npm start
