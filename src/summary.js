@@ -31,6 +31,16 @@ export default class Summary extends React.Component {
   }
   render() {
     const {symbolList} = this.state;
+    if (symbolList && !symbolList.length > 0)
+    {
+      return (
+        <div className="wrapper">
+          <div className="loading">
+            <div className="loader"></div>
+          </div>
+        </div>
+      );
+    }
     return (
       <div className="wrapper">
             <CardList 

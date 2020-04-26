@@ -39,12 +39,10 @@ export default class Details extends React.Component {
           symbolList: symbolList,
         });
       }
-      console.log("componentDidMount", symbolList, symbolDetail);
     }
   }
   render() {
     const { symbolDetail, symbolList } = this.state;
-    console.log(symbolDetail, symbolList);
     if (
       (symbolDetail && !symbolDetail.length > 0) ||
       (symbolList && !symbolList.length > 0)
@@ -59,6 +57,9 @@ export default class Details extends React.Component {
     }
     return (
       <div className="wrapper">
+        <div className="row prev">
+          <div className="previous round" onClick={() => this.props.history.goBack()}><span>&#xab;</span></div>
+        </div>
         <Cards item={symbolList} />
         <TableView items={symbolDetail} />
       </div>
